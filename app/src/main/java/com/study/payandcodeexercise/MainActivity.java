@@ -79,8 +79,8 @@ public class MainActivity extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == 1) {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-//                Intent intent = new Intent(this, CaptureActivity.class);
-//                startActivityForResult(intent, 1);
+                Intent intent = new Intent(this, CaptureActivity.class);
+                startActivityForResult(intent, 1);
             } else {
                 Toast.makeText(MainActivity.this, "请打开相机权限", Toast.LENGTH_SHORT).show();
             }
